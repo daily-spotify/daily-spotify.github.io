@@ -27,10 +27,9 @@ const addPlaylist = ()=>{
     let playlist = "";
     for(let i in data){
         if(data[i].id == 1){
-            playlist += `<div class="carousel-item active">
+            playlist += `<div class="carousel-item active" onclick='reproducir(${data[i].id})'>
                 <img src="./data-image/${data[i].id}.jpeg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                <button class='btn btn-dark' onclick='reproducir(${data[i].id})'>Play</button>
                 <br><br>
                 <h5 class='texto'>${data[i].nombre}</h5>
                 <p class='texto'>${data[i].autor}</p>
@@ -38,10 +37,9 @@ const addPlaylist = ()=>{
             </div>`;
         }
         else{
-            playlist += `<div class="carousel-item">
+            playlist += `<div class="carousel-item" onclick='reproducir(${data[i].id})'>
                 <img src="./data-image/${data[i].id}.jpeg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                <button class='btn btn-dark' onclick='reproducir(${data[i].id})'>Play</button>
                 <br><br>
                 <h5 class='texto'>${data[i].nombre}</h5>
                 <p class='texto'>${data[i].autor}</p>
